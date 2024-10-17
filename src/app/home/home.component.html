@@ -1,0 +1,44 @@
+<!-- Enhanced Banner Section with Distinct Colors -->
+<div class="banner text-center py-5">
+  <div class="container">
+    <h1 class="display-4 text-white font-weight-bold">Welcome to QuizHustle!</h1>
+    <p class="lead text-white">Test your knowledge and skills with our interactive quizzes.</p>
+    <p class="text-white">Join thousands of learners in a fun and engaging way to assess your understanding.</p>
+    <p class="text-white">Whether you're preparing for exams or just want to challenge yourself, we have the perfect quiz for you!</p>
+    <a href="/home" class="btn btn-light btn-lg mt-3">Explore Quizzes</a>
+  </div>
+</div>
+
+<div class="container mt-4 pt-5"> <!-- Added pt-5 for top padding -->
+  <div class="text-center">
+    <h2 class="display-4 font-weight-bold text-primary">Explore Quizzes</h2>
+    <p class="lead text-secondary">Challenge your knowledge with our curated quizzes!</p>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-4 mb-4" *ngFor="let quiz of quizzes">
+      <div class="card quiz-card shadow-lg">
+        <div class="quiz-image-wrapper">
+          <img [src]="quiz.imageUrl" class="card-img-top quiz-image" alt="{{ quiz.title }}">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ quiz.title }}</h5>
+          <p class="card-text">{{ quiz.description }}</p>
+          <!-- Conditional routing based on quiz title -->
+          <a *ngIf="quiz.title === 'Aptitude'" routerLink="/math-quiz" class="btn btn-primary btn-block">Start Quiz</a>
+          <a *ngIf="quiz.title === 'English Grammar'" routerLink="/english" class="btn btn-primary btn-block">Start Quiz</a>
+          <a *ngIf="quiz.title === 'Data Structure'" routerLink="/data-structure-quiz" class="btn btn-primary btn-block">Start Quiz</a>
+          <a *ngIf="quiz.title === 'Software Engineering'" routerLink="/software-engineering-quiz" class="btn btn-primary btn-block">Start Quiz</a>
+          <a *ngIf="quiz.title === 'Front end Framework'" routerLink="/angular" class="btn btn-primary btn-block">Start Quiz</a>
+          <a *ngIf="quiz.title === 'Ionic'" routerLink="/ionic" class="btn btn-primary btn-block">Start Quiz</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Additional CSS for the enhanced banner -->
+<style>
+  
+</style>

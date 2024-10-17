@@ -1,0 +1,176 @@
+<div class="container mt-5">
+    <section id="banner" class="text-white text-center py-5 mb-5">
+      <h1 class="display-4 font-weight-bold">Welcome to QuizHustle</h1>
+      <p class="lead text-white">Where knowledge meets fun. Discover our journey and meet the people behind the scenes.</p>
+    </section>
+  
+    <section id="our-story" class="mb-5">
+      <div class="text-center mb-4">
+        <h2 class="display-4 font-weight-bold text-primary">Our Story</h2>
+        <p class="lead text-secondary">From humble beginnings to a global platform</p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://files.oaiusercontent.com/file-UbpW4nHIkunNcRLeyNtZZaYD?se=2024-10-16T19%3A58%3A41Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D623266d5-c09c-44b3-9409-8db64faee714.webp&sig=jfDSyqK0YispzZuUUj56YTZN%2B2C6SKoPQVy71yTRStA%3D" alt="Our Story" class="img-fluid rounded shadow" height="90%" width="90%">
+        </div>
+        <div class="col-md-6">
+          <p class="text-muted">QuizHustle began as a small project among quiz enthusiasts with a passion for knowledge sharing. Today, it has grown into a global platform that empowers users to challenge themselves in a fun, engaging, and educational way. Our vision is to provide quizzes that are not only informative but also entertaining, helping users expand their knowledge while enjoying the process of learning.</p>
+          
+          <p class="text-muted">What started with just a handful of quizzes has now expanded into hundreds of topics across multiple domains—ranging from science and history to pop culture, technology, and current events. With each new quiz, we aim to strike the perfect balance between education and enjoyment. Whether you're a student preparing for exams or a professional brushing up on industry knowledge, QuizHustle offers something for everyone.</p>
+          
+          <p class="text-muted">Our platform serves a diverse audience, including students testing their knowledge, lifelong learners exploring new topics, professionals keeping their skills sharp, and casual users seeking a fun way to spend their time. With interactive features like timed quizzes, instant results, and scoreboards, we ensure that each quiz is an exciting challenge.</p>
+          
+          <!-- <p class="text-muted">QuizHustle continues to evolve based on feedback from our dedicated community of users. Our mission is to become the go-to platform for quizzes that inspire curiosity, promote learning, and bring people together through shared interests. We are committed to delivering high-quality content that caters to all learning styles, from visual learners to those who prefer more in-depth analytical challenges.</p> -->
+        
+          <!-- <p class="text-muted">Join us on this journey of discovery and personal growth. Whether you're competing against friends or aiming for a personal best, QuizHustle is here to make learning more fun, accessible, and rewarding for everyone.</p> -->
+        </div>
+        
+      </div>
+    </section>
+  
+    <section id="mission-vision" class="mb-5 bg-gradient py-5 rounded shadow">
+      <div class="row text-center">
+        <div class="col-md-6">
+          <h3 class="font-weight-bold text-white">Our Mission</h3>
+          <p class="text-light">To make learning engaging and fun through interactive quizzes and modern tools that empower learners everywhere.</p>
+        </div>
+        <div class="col-md-6">
+          <h3 class="font-weight-bold text-white">Our Vision</h3>
+          <p class="text-light">To create a world where learning never stops, where curiosity is rewarded with new knowledge every day.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section id="our-team" class="mb-5 py-5 team-section">
+      <div class="text-center mb-4">
+        <h2 class="display-4 font-weight-bold text-primary">Meet Our Team</h2>
+        <p class="lead">The masterminds behind QuizHustle</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-3 mb-4" *ngFor="let teamMember of teamMembers">
+          <div class="card team-card border-0 shadow-lg position-relative">
+            <img [src]="teamMember.photoUrl" class="card-img-top rounded-circle w-75 mx-auto mt-3 shadow-lg team-img" alt="{{ teamMember.name }}">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold text-dark">{{ teamMember.name }}</h5>
+              <p class="card-text text-muted">{{ teamMember.role }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="core-values" class="mb-5">
+      <div class="text-center mb-4">
+        <h2 class="display-4 font-weight-bold text-primary">Our Core Values</h2>
+        <p class="lead text-secondary">What drives us every day</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h4 class="font-weight-bold">Integrity</h4>
+          <p class="text-muted">We act with transparency, honesty, and ethical practices in everything we do.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="font-weight-bold">Innovation</h4>
+          <p class="text-muted">We are committed to pushing boundaries and continuously improving through creative solutions.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="font-weight-bold">Excellence</h4>
+          <p class="text-muted">We strive for excellence in every aspect, from product development to customer service.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section id="achievements" class="mb-5">
+      <div class="text-center mb-4">
+        <h2 class="display-4 font-weight-bold text-primary">Our Achievements</h2>
+        <p class="lead text-secondary">Proud milestones we've reached</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h4 class="font-weight-bold">500,000+</h4>
+          <p class="text-muted">Active users worldwide</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="font-weight-bold">1,200+</h4>
+          <p class="text-muted">Quizzes created in various subjects</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="font-weight-bold">100+</h4>
+          <p class="text-muted">Countries where our quizzes are used</p>
+        </div>
+      </div>
+    </section>
+  
+    <section id="testimonials" class="mb-5">
+      <div class="text-center mb-4">
+        <h2 class="display-4 font-weight-bold text-primary">What Our Users Say</h2>
+        <p class="lead text-secondary">Hear from our satisfied users</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <blockquote class="blockquote text-muted">
+            <p>"QuizHustle has been an amazing tool for our team's training sessions. We love the variety of quizzes!"</p>
+            <footer class="blockquote-footer">Alex Martin, <cite title="Company">TechCorp</cite></footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote text-muted">
+            <p>"I use QuizHustle for my daily knowledge refresh. It's so much fun and keeps me on my toes!"</p>
+            <footer class="blockquote-footer">Sophia Ramirez, <cite title="Location">New York, USA</cite></footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote text-muted">
+            <p>"As a teacher, I find the quizzes a great tool to engage my students. Thank you QuizHustle!"</p>
+            <footer class="blockquote-footer">Emily Johnson, <cite title="School">Westbrook School</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  
+    <section id="partners" class="mb-5">
+      <div class="text-center mb-4">
+        <h2 class="display-4 font-weight-bold text-primary">Our Partners</h2>
+        <p class="lead text-secondary">We collaborate with the best</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOk9U3wrwafW_TMtewIAhQa4AEXcpQTVl5Qw&s" alt="Partner 1" class="img-fluid" height="50px" width="50px">
+        </div>
+        <div class="col-md-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEDt6wd1mUzwYXpRVY7WCEH54q-JlEyRYPMg&s" alt="Partner 2" class="img-fluid" height="60px" width="60px">
+        </div>
+        <div class="col-md-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTL1EHoZRkqABZLpmZlZGS0BvI9IeNdUQaZQ&s" alt="Partner 3" class="img-fluid" height="60px" width="60px">
+        </div>
+        <div class="col-md-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHtUaLbxjSOkZXX9nWpRBj76tz693s8HpMg&s" alt="Partner 4" class="img-fluid">
+        </div>
+        <div class="col-md-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkAdG-XrWmbQADVFLPvGvmxoT_5v1SREcm1A&s" alt="Partner 1" class="img-fluid" height="50px" width="50px">
+          </div>
+          <div class="col-md-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4n4PS7tda_giC-rHrXHQ7DpSLRPaqJyCuEg&s" alt="Partner 2" class="img-fluid" height="60px" width="60px">
+          </div>
+          <div class="col-md-1">
+            <img src="https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo.png" alt="Partner 3" class="img-fluid" height="60px" width="60px">
+          </div>
+          <div class="col-md-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHtUaLbxjSOkZXX9nWpRBj76tz693s8HpMg&s" alt="Partner 4" class="img-fluid">
+          </div>
+          <div class="col-md-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOk9U3wrwafW_TMtewIAhQa4AEXcpQTVl5Qw&s" alt="Partner 1" class="img-fluid" height="50px" width="50px">
+          </div>
+          <div class="col-md-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEDt6wd1mUzwYXpRVY7WCEH54q-JlEyRYPMg&s" alt="Partner 2" class="img-fluid" height="60px" width="60px">
+          </div>
+          <div class="col-md-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTL1EHoZRkqABZLpmZlZGS0BvI9IeNdUQaZQ&s" alt="Partner 3" class="img-fluid" height="60px" width="60px">
+          </div>
+          <div class="col-md-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHtUaLbxjSOkZXX9nWpRBj76tz693s8HpMg&s" alt="Partner 4" class="img-fluid">
+          </div>
+      </div>
+    </section>
+  </div>
+  

@@ -1,0 +1,39 @@
+.footer {
+    background: linear-gradient(135deg, #6C63FF, #3F3D56); 
+    color: white;
+    height: 100%; 
+   
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex; 
+}
+
+.social-icon {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social-icon img {
+    height: 25px;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .social-icon img {
+        height: 20px;
+    }
+}

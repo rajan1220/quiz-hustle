@@ -1,0 +1,67 @@
+<div class="container mt-4">
+    <div class="heading">
+        <h2>Front-End Javascript Framework Quiz</h2>
+        <h5 class="">Time Remaining: <span class="timer">{{ minutes }}:{{ seconds < 10 ? '0' + seconds : seconds }}</span></h5>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="question-block">
+                <h4>Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</h4>
+                <p>{{ questions[currentQuestionIndex].question }}</p>
+
+                <div *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
+                    <div class="form-check">
+                        <input 
+                            type="radio" 
+                            class="form-check-input" 
+                            [checked]="userAnswers[currentQuestionIndex] === option"
+                            (change)="selectAnswer(currentQuestionIndex, option)"
+                            id="option{{ currentQuestionIndex }}{{ i }}"
+                        >
+                        <label class="form-check-label" [for]="'option' + currentQuestionIndex + i">
+                            {{ option }}
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group ">
+                    <div class="navigation-buttons mt-3">
+                        <button class="btn btn-secondary" (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+                        <button class="btn btn-secondary" (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+                    </div>
+    
+                    <div class="submit-section mt-3">
+                        <button class="btn btn-primary" (click)="submitQuiz()">Submit Quiz</button>
+                    </div>
+                </div>
+
+                <div *ngIf="quizSubmitted" class="results mt-4">
+                    <h4>Your Score: {{ score }} out of {{ questions.length }}</h4>
+                    <button class="btn btn-success" (click)="retakeQuiz()">Retake Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-blocks col-md-4">
+            <h4>Questions</h4>
+            <ul class="list-group">
+                <li 
+                    *ngFor="let question of questions; let i = index" 
+                    (click)="currentQuestionIndex = i" 
+                    [class.active]="currentQuestionIndex === i"
+                    class="list-group-item" 
+                    [ngClass]="{
+                        'list-group-item-success': quizSubmitted && userAnswers[i] === question.correctAnswer,
+                        'list-group-item-danger': quizSubmitted && userAnswers[i] !== undefined && userAnswers[i] !== question.correctAnswer,
+                        'list-group-item-light': quizSubmitted && userAnswers[i] === undefined,
+                        'list-group-item-info': userAnswers[i] !== undefined
+                    }"
+                >
+                     {{ i + 1 }}
+                </li>
+            </ul>
+        </div>
+        
+        
+        
+        
+</div>
