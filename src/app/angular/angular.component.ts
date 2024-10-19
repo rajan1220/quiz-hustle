@@ -179,7 +179,6 @@ export class AngularComponent implements OnInit {
     this.startTimer();
   }
 
-  // Start the countdown timer
   startTimer() {
     this.interval = setInterval(() => {
       if (this.seconds === 0) {
@@ -195,26 +194,22 @@ export class AngularComponent implements OnInit {
     }, 1000);
   }
 
-  // Select answer for the current question
   selectAnswer(questionIndex: number, answer: string) {
     this.userAnswers[questionIndex] = answer;
   }
 
-  // Go to the previous question
   previousQuestion() {
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
     }
   }
 
-  // Go to the next question
   nextQuestion() {
     if (this.currentQuestionIndex < this.questions.length - 1) {
       this.currentQuestionIndex++;
     }
   }
 
-  // Submit the quiz
   submitQuiz() {
     this.quizSubmitted = true;
     this.score = this.userAnswers.filter(
@@ -223,7 +218,6 @@ export class AngularComponent implements OnInit {
     clearInterval(this.interval);
   }
 
-  // Retake the quiz
   retakeQuiz() {
     this.currentQuestionIndex = 0;
     this.quizSubmitted = false;

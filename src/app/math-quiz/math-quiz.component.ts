@@ -1,4 +1,3 @@
-// src/app/math-quiz/math-quiz.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -40,14 +39,13 @@ export class MathQuizComponent implements OnInit {
     { text: 'What is 20 + 30?', options: ['50', '40', '60', '70'], correct: '50' },
     { text: 'What is 36 / 6?', options: ['6', '7', '8', '9'], correct: '6' },
     
-    // Add more questions here...
   ];
 
   userAnswers: string[] = [];
   currentQuestionIndex = 0;
   quizSubmitted = false;
   score = 0;
-  minutes = 30; // Set timer to 30 minutes
+  minutes = 30;  
   seconds = 0;
   timer: any;
 
@@ -58,7 +56,7 @@ export class MathQuizComponent implements OnInit {
   }
 
   selectAnswer(questionIndex: number, option: string) {
-    this.userAnswers[questionIndex] = option; // Save the user's answer
+    this.userAnswers[questionIndex] = option;  
   }
 
   nextQuestion() {
@@ -76,7 +74,7 @@ export class MathQuizComponent implements OnInit {
   submitQuiz() {
     this.quizSubmitted = true;
     this.calculateScore();
-    clearInterval(this.timer);  // Stop the timer when quiz is submitted
+    clearInterval(this.timer);   
   }
 
   calculateScore() {
@@ -87,7 +85,7 @@ export class MathQuizComponent implements OnInit {
     this.timer = setInterval(() => {
       if (this.seconds === 0) {
         if (this.minutes === 0) {
-          this.submitQuiz(); // Auto-submit when time is up
+          this.submitQuiz(); 
         } else {
           this.minutes--;
           this.seconds = 59;
@@ -103,7 +101,7 @@ export class MathQuizComponent implements OnInit {
     this.userAnswers = [];
     this.currentQuestionIndex = 0;
     this.score = 0;
-    this.minutes = 30; // Reset timer
+    this.minutes = 30;  
     this.seconds = 0;
     this.startTimer();
   }

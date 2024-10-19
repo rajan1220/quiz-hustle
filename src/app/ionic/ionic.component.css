@@ -1,9 +1,7 @@
-/* General Styles */
 .container {
     margin-top: 20px;
 }
 
-/* Question Blocks (Left Sidebar) */
 .question-blocks {
     background-color: #f8f9fa;
     padding: 20px;
@@ -49,26 +47,25 @@ h5{
 }
 
 .list-group-item-info {
-    background-color: #17a2b8 !important; /* Light blue for attempted answers */
+    background-color: #17a2b8 !important;  
     color: white;
 }
 
 
 .list-group-item.active {
-    background-color: #007bff !important; /* Active item color */
+    background-color: #007bff !important;  
     color: white;
     font-weight: bold;
 }
 
 .list-group-item:hover {
-    background-color: #e9ecef; /* Light gray on hover */
+    background-color: #e9ecef;  
 }
 
-/* Current Question Card (Right Side) */
 .card {
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Add padding for the card */
+    padding: 20px;  
 }
 
 .card-title {
@@ -85,22 +82,22 @@ h5{
 }
 
 button {
-    margin-right: 10px; /* Spacing between buttons */
+    margin-right: 10px; 
 }
 
 /* Styles for Question Status */
 .list-group-item-success {
-    background-color: #28a745 !important; /* Green for correct answers */
+    background-color: #28a745 !important; 
     color: white;
 }
 
 .list-group-item-danger {
-    background-color: #dc3545 !important; /* Red for incorrect answers */
+    background-color: #dc3545 !important;
     color: white;
 }
 
 .list-group-item-light {
-    background-color: #f8f9fa !important; /* Light gray for unanswered */
+    background-color: #f8f9fa !important; 
     color: #6c757d;
 }
 

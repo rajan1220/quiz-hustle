@@ -10,6 +10,6 @@ constructor() {
   this.ImagePath = '../../assets/images/logo.png';
  }
   ngOnInit(): void {
-    // throw new Error('Method not implemented.');
+   
   }
 }

@@ -164,11 +164,10 @@ export class IonicComponent implements OnInit {
   userAnswers: string[] = [];
   score: number = 0;
   quizSubmitted: boolean = false;
-  minutes: number = 30; // Set timer values
+  minutes: number = 30;  
   seconds: number = 0;
 
   ngOnInit() {
-    // Start timer or any other initialization logic
     this.startTimer();
   }
 
@@ -176,7 +175,7 @@ export class IonicComponent implements OnInit {
     setInterval(() => {
       if (this.seconds === 0) {
         if (this.minutes === 0) {
-          this.submitQuiz(); // Automatically submit the quiz when time is up
+          this.submitQuiz();  
         } else {
           this.minutes--;
           this.seconds = 59;
@@ -215,8 +214,8 @@ export class IonicComponent implements OnInit {
     this.userAnswers = [];
     this.score = 0;
     this.quizSubmitted = false;
-    this.minutes = 30; // Reset timer
+    this.minutes = 30;  
     this.seconds = 0;
-    this.startTimer(); // Restart timer
+    this.startTimer();  
   }
 }

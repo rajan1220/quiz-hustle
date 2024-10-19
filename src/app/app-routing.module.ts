@@ -1,4 +1,3 @@
-// app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -24,7 +23,8 @@ const routes: Routes = [
   { path: 'software-engineering-quiz', component: SoftwareEngineeringQuizComponent },
   { path:'angular', component: AngularComponent},
   { path: 'ionic', component: IonicComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, 
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' } 
 ];
 
 @NgModule({

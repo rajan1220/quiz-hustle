@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Ensure FormsModule is imported
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Consolidated imports
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,9 @@ import { EnglishComponent } from './english/english.component';
 import { AngularComponent } from './angular/angular.component';
 import { IonicComponent } from './ionic/ionic.component';
 import { PythonComponent } from './python/python.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { RegistrationSuccessDialogComponent } from './register/register.component'; // Removed duplicate RegisterComponent import
 
 @NgModule({
   declarations: [
@@ -26,7 +29,7 @@ import { PythonComponent } from './python/python.component';
     HomeComponent,
     AboutComponent,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent, // Keep only one declaration of RegisterComponent
     FooterComponent,
     ForgotPasswordComponent,
     MathQuizComponent,
@@ -35,14 +38,19 @@ import { PythonComponent } from './python/python.component';
     EnglishComponent,
     AngularComponent,
     IonicComponent,
-    PythonComponent
+    PythonComponent,
+    RegistrationSuccessDialogComponent // Ensure this is declared here
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    MatDialogModule // Ensure MatDialogModule is included
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync() // This is fine to keep
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

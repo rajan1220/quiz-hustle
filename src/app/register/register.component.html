@@ -1,30 +1,29 @@
-<!-- register.component.html -->
 <div class="register-container">
-    <h2 class="register-title">Create Your Account</h2>
-    <form (submit)="onRegister()" class="register-form">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" class="form-control" placeholder="Enter your name" [(ngModel)]="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" class="form-control" placeholder="Enter your email" [(ngModel)]="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
-      </div>
-      <div class="form-group">
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
-      </div>
-      <div *ngIf="passwordMismatch" class="alert alert-danger">
-        Passwords do not match.
-      </div>
-      <button type="submit" class="btn btn-primary btn-block">Register</button>
-      <p class="text-center mt-3">
-        Already have an account? <a routerLink="/login">Login</a>
-      </p>
-    </form>
-  </div>
-  
+  <h2 class="register-title">Create Your Account</h2>
+  <form (ngSubmit)="onRegister()" class="register-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="form-control" placeholder="Enter your name" [(ngModel)]="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" class="form-control" placeholder="Enter your email" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" class="form-control" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+    </div>
+    <!-- Show error message if passwords don't match -->
+    <div *ngIf="passwordMismatch" class="alert alert-danger">
+      Passwords do not match.
+    </div>
+    <button type="submit" class="btn btn-gradient btn-block">Register</button>
+    <p class="text-center mt-3">
+      Already have an account? <a routerLink="/login" class="text-register">Login</a>
+    </p>
+  </form>
+</div>
