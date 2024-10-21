@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
     {
       name: 'Saksham Pradhan',
       role: 'Lead Developer',
-      photoUrl: 'https://files.oaiusercontent.com/file-FOer5aqQUi9ZENESNZgsB3Hv?se=2024-10-17T06%3A21%3A47Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D32789afd-8601-43ef-bdf1-b054e2770f2b.webp&sig=9htIQJPUMUBRGt%2B9qK6NaxPXvdK%2BNqgPcxraRRqlWEI%3D'
+      photoUrl: 'https://tse3.mm.bing.net/th?id=OIG4.A3cJM05HstiklGmY1fN5&pid=ImgGn'
     },
     {
       name: 'Aditi Sharma',
